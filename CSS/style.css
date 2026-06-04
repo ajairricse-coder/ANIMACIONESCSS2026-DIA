@@ -227,7 +227,7 @@ body {
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    animation-fill-mode: forwards; /* Mantiene la opacidad en 1 al terminar */
+    animation-fill-mode: forwards;
 }
 
 
