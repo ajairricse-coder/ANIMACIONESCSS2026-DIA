@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Tarea de Animaciones</title>
+    <style type="text/css">
+
+        body {
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .galeria-contenedor {
+            display: flex;
+            background-color: #333;
+            border: 5px solid black;
+            padding: 20px;
+            width: 90%;
+            max-width: 1100px;
+            overflow: hidden;
+        }
+
+        .tarjeta-jugador {
+            width: 25%;
+            aspect-ratio: 9 / 14;
+            margin: 5px;
+        }
+
+        .tarjeta-jugador img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        .animacion-dahyun {
+            animation: izquierdaADerecha 1.5s ease-out;
+            animation-delay: 0.5s;
+        }
+        @keyframes izquierdaADerecha {
+            from {
+                transform: translateX(-150%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .animacion-deadmau5 {
+            animation: subirDesdeAbajo 1.5s ease-out;
+            animation-delay: 2s; 
+        }
+        @keyframes subirDesdeAbajo {
+            from {
+                transform: translateY(150%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .animacion-faker {
+            animation: achicarTamaño 1.5s ease-out;
+            animation-delay: 3.5s; 
+        }
+        @keyframes achicarTamaño {
+            from {
+                transform: scale(3);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .animacion-dendi {
+            animation: derechaAIzquierdaBorroso 1.5s ease-out;
+            animation-delay: 5s; 
+        }
+        @keyframes derechaAIzquierdaBorroso {
+            from {
+                transform: translateX(150%);
+                filter: blur(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                filter: blur(0px);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="galeria-contenedor">
+
+        <div class="tarjeta-jugador">
+            <img class="animacion-dendi" src="assets/dendi.png" alt="Dendi">
+        </div>
+
+        <div class="tarjeta-jugador">
+            <img class="animacion-faker" src="assets/faker.png" alt="Faker">
+        </div>
+
+        <div class="tarjeta-jugador">
+            <img class="animacion-deadmau5" src="assets/dead.png" alt="Deadmau5">
+        </div>
+
+        <div class="tarjeta-jugador">
+            <img class="animacion-dahyun" src="assets/dahyun.png" alt="Dahyun">
+        </div>
+
+    </div>
+
+</body>
+</html>
