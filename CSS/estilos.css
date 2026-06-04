@@ -1,0 +1,121 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color:black;
+}
+
+.contenedor{
+    width:500px;
+    height:800px;
+    border:1px solid white;
+    margin:0 auto;
+    overflow:hidden;
+    position:relative;
+}
+
+.cielo{
+    position:absolute;
+    width:600px;
+    top: -30px;
+    left:-30px;
+    filter:blur(3px);
+
+    animation:cielo 6s linear infinite alternate;
+}
+@keyframes cielo{
+    from{
+        top:-40px;
+    }
+    to{
+        top:-40px;
+        scale: 90%;
+    }
+}
+.montaña{
+    position:absolute;
+    width:700px;
+    bottom:-75px;
+    left:-100px;
+
+    animation:montaña 6s ease-in-out infinite alternate;
+}
+@keyframes montaña{
+    from{
+        top: 480px;;
+    }
+    to{
+        top: 480px;
+        scale: 70%; 
+    }
+}
+
+.persona{
+    position:absolute;
+    width:200px;
+    left:150px;
+    bottom:300px;
+    animation: persona 6s ease-in-out infinite alternate;
+}
+@keyframes persona{
+    from{
+        top: 600px;
+    }
+    to{
+        top: 400px;
+        scale: 110%; 
+    }
+}
+
+.fog{
+    position: absolute;
+    width: 600px;
+    left: 0px;
+    bottom: 0px;
+    animation: fog 15s ease-in-out infinite alternate;
+}
+@keyframes fog{
+    from{
+        left: -300px;
+    }
+    to{
+        left: 300px;
+    }
+}
+
+.title{
+    position:absolute;
+
+    top:0px;
+
+    left:-30px;
+
+    width:1400px;
+
+    z-index:100;
+
+    animation:tituloEpic 6s infinite alternate;
+}
+
+.title svg{
+    width:100%;
+    height:auto;
+
+    filter:
+    drop-shadow(0px 0px 20px orange)
+    drop-shadow(0px 0px 40px red)
+    drop-shadow(0px 0px 60px yellow);
+}
+@keyframes tituloEpic{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.03);
+    }
+
+}
