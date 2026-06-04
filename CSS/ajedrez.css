@@ -1,0 +1,43 @@
+/* ==========================================================
+   RESETEO GLOBAL
+   ========================================================== */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* ==========================================================
+   ESTILOS DE LOS CUADROS INDIVIDUALES
+   ========================================================== */
+.cuadrito1 {
+    background-color: black;
+}
+
+.cuadrito2 {
+    background-color: yellow;
+}
+
+/* Propiedades compartidas para ambos tipos de cuadritos */
+.cuadrito1, .cuadrito2 {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+/* ==========================================================
+   CONTENEDORES DE LAS FILAS
+   ========================================================== */
+.contenedor1 {
+    height: 100px;         
+    width: 800px;          
+    background-color: black; 
+    font-size: 0px; /* Elimina el espacio fantasma entre elementos inline-block */       
+}
+
+.contenedor2 {
+    height: 100px;         
+    width: 800px;          
+    background-color: black; 
+    font-size: 0px; /* Elimina el espacio fantasma entre elementos inline-block */        
+}
