@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 500px;
+    height: 800px;
+    border: 2px solid black; 
+    position: relative;     
+    overflow: hidden;       
+    margin: 20px auto;      
+    background-color: #FFC300; 
+}
+
+.splash {
+    position: absolute;
+    width: 400px;
+    top: 130px;             
+    left: 30px;
+    z-index: 1;             
+    
+    opacity: 0; 
+    animation: aparece 0.2s forwards;
+    animation-delay: 0.45s; 
+}
+
+.coco {
+    position: absolute;
+    width: 300px;
+    top: 120px;             
+    left: 50px;
+    z-index: 2;             
+    
+    animation: cae 0.6s ease-in forwards;
+}
+
+.palmera {
+    position: absolute;
+    width: 400px;
+    top: 0px;               
+    left: 100px;
+    z-index: 3;  
+    opacity: 0; 
+    animation: entra 0.2s forwards;
+    animation-delay: 0.45s;
+}
+
+.sol {
+    position: absolute;
+    width: 350px;
+    top: -50px;              
+    left: -50px;
+    z-index: 4;  
+    opacity: 0; 
+    animation: sale 0.2s forwards;
+    animation-delay: 0.45s;
+    
+}
+
+@keyframes cae {
+    0% {
+        top: -300px;
+    }
+    85% {
+        top: 120px;
+        transform: scaleY(1);
+    }
+    93% {
+        top: 135px;
+        transform: scaleY(0.8) scaleX(1.1);
+    }
+    100% {
+        top: 120px;
+        transform: scaleY(1) scaleX(1);
+    }
+}
+
+@keyframes aparece {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes entra {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes sale {
+    0% {
+        opacity: 0;
+        transform: translatex(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translatex(0px);
+    }
+}
