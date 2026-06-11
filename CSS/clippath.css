@@ -13,7 +13,7 @@
         .fondo{
             width: 400px;
             height: 800px;
-            background-image:url(assets/fondo.jpg);
+            background-image:url(../assets/fondo.jpg);
             background-size: cover;
             position: absolute;
             top:0px;
@@ -22,7 +22,7 @@
         .sombrero{
             width:200px;
             height: 150px;
-            background-image:url(assets/rasta.jpg);
+            background-image:url(../assets/rasta.jpg);
             background-size: cover;
             clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
             position: absolute;
@@ -32,7 +32,7 @@
         .brazos{
             width:400px;
             height: 150px;
-            background-image:url(assets/piel.jpg);
+            background-image:url(../assets/piel.jpg);
             background-size: cover;
             clip-path: polygon(90% 49%, 100% 60%, 90% 71%, 13% 71%, 0% 60%, 13% 48%);
             position: absolute;
@@ -42,7 +42,7 @@
         .oberol{
             width:200px;
             height: 300px;
-            background-image:url(assets/jean.jpg);
+            background-image:url(../assets/jean.jpg);
             background-size: cover;
             clip-path: polygon(29% 0, 69% 0, 100% 100%, 0% 100%);
             position: absolute;
@@ -52,7 +52,7 @@
         .marco1{
             width:200px;
             height: 200px;
-            background-image:url(assets/sonrisa2.jpg);
+            background-image:url(../assets/sonrisa2.jpg);
             background-size: cover;
             clip-path: circle(50% at 50% 50%);
             position: absolute;
@@ -62,7 +62,7 @@
         .zapatod{
             width:150px;
             height: 150px;
-            background-image:url(assets/gamuza.jpg);
+            background-image:url(../assets/gamuza.jpg);
             background-size: cover;
             clip-path: polygon(34% 32%, 73% 33%, 88% 46%, 88% 61%, 73% 71%, 30% 70%, 19% 61%, 20% 46%);
             position: absolute;
@@ -74,7 +74,7 @@
         .zapatoi{
             width:150px;
             height: 150px;
-            background-image:url(assets/gamuza.jpg);
+            background-image:url(../assets/gamuza.jpg);
             background-size: cover;
             clip-path: polygon(34% 32%, 73% 33%, 88% 46%, 88% 61%, 73% 71%, 30% 70%, 19% 61%, 20% 46%);
             position: absolute;
@@ -86,7 +86,7 @@
         .barquillo{
             width:100px;
             height: 100px;
-            background-image:url(assets/galleta.jpg);
+            background-image:url(../assets/galleta.jpg);
             background-size: cover;
             clip-path: polygon(51% 100%, 26% 0, 78% 0);
             position: absolute;
@@ -96,7 +96,7 @@
         .helado1{
             width:50px;
             height:50px;
-            background-image:url(assets/vainilla.jpg);
+            background-image:url(../assets/vainilla.jpg);
             background-size: cover;
             clip-path: circle(50% at 50% 50%);
             position: absolute;
@@ -106,7 +106,7 @@
         .helado2{
             width:50px;
             height:50px;
-            background-image:url(assets/fresa.jpg);
+            background-image:url(../assets/fresa.jpg);
             background-size: cover;
             clip-path: circle(50% at 50% 50%);
             position: absolute;
@@ -116,7 +116,7 @@
         .helado3{
             width:50px;
             height:50px;
-            background-image:url(assets/menta.jpg);
+            background-image:url(../assets/menta.jpg);
             background-size: cover;
             clip-path: circle(50% at 50% 50%);
             position: absolute;
