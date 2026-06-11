@@ -95,3 +95,8 @@ body {
         opacity: 1;
     }
 }
+.cinta-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
