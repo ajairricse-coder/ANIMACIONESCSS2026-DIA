@@ -181,7 +181,7 @@ body {
     cursor: pointer;
 }
 
-.boton-evil:hover {
+.boton :hover {
     background-color: #BA55D3;
     border-color: #ffffff;
     color: #000000;
@@ -190,7 +190,7 @@ body {
     transform: translateY(-3px);
 }
 
-.boton-evil:active {
+.boton :active {
     transform: translateY(-1px);
     box-shadow: 0 0 8px rgba(186, 85, 211, 0.6);
 }
