@@ -1,4 +1,3 @@
-/* Variables de estilo */
 :root {
   --bg-dark: #0f0f12;
   --card-bg: #18181c;
@@ -16,7 +15,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Fondo con efecto de degradado */
 .ar-bg-overlay {
   position: fixed;
   top: 0;
@@ -30,7 +28,6 @@ body {
   z-index: -1;
 }
 
-/* Header */
 .navbar-custom {
   background: rgba(15, 15, 18, 0.85);
   backdrop-filter: blur(10px);
@@ -38,7 +35,7 @@ body {
 }
 
 .brand-glow {
-  color: #fff;
+  color: #ffffff;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -49,7 +46,6 @@ body {
   text-shadow: 0 0 10px var(--guinda-glow);
 }
 
-/* Tarjeta del Panel AR */
 .ar-panel-card {
   background-color: var(--card-bg);
   border: 1px solid rgba(128, 0, 32, 0.4);
@@ -58,17 +54,15 @@ body {
   overflow: hidden;
 }
 
-/* Contenedor responsivo para la experiencia AR */
 .ar-viewport-container {
   position: relative;
   width: 100%;
   height: 75vh;
-  background-color: #000;
+  background-color: #000000;
   border-radius: 12px;
   overflow: hidden;
 }
 
-/* Pantalla de Inicio / Portada AR */
 .ar-welcome-screen {
   position: absolute;
   top: 0;
@@ -84,26 +78,25 @@ body {
   transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-/* Botón de Inicio Gigante con efecto Latido */
 .btn-start-ar {
   background: linear-gradient(135deg, var(--guinda-bright) 0%, #ff0040 100%);
-  color: #fff;
+  color: #ffffff;
   border: 2px solid rgba(255, 255, 255, 0.2);
-  padding: 20px 40px;
-  font-size: 1.5rem;
+  padding: 18px 36px;
+  font-size: 1.3rem;
   font-weight: 700;
   border-radius: 50px;
   box-shadow: 0 0 30px var(--guinda-glow);
   transition: all 0.3s ease;
   animation: pulse-glow 2s infinite;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 12px;
 }
 
 .btn-start-ar:hover {
   transform: scale(1.05);
-  color: #fff;
+  color: #ffffff;
   box-shadow: 0 0 50px rgba(255, 0, 64, 0.8);
 }
 
@@ -117,13 +110,12 @@ body {
   width: 100%;
   height: 100%;
   border: 0;
-  display: none; /* Oculto hasta que se presione iniciar */
+  display: none;
 }
 
-/* Botones secundarios */
 .btn-guinda {
   background: linear-gradient(135deg, var(--guinda-primary) 0%, var(--guinda-bright) 100%);
-  color: #fff;
+  color: #ffffff;
   border: none;
   font-weight: 600;
   box-shadow: 0 4px 15px var(--guinda-glow);
@@ -132,10 +124,16 @@ body {
 
 .btn-guinda:hover {
   background: linear-gradient(135deg, var(--guinda-bright) 0%, #d60036 100%);
-  color: #fff;
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
-  .ar-viewport-container { height: 80vh; }
-  .btn-start-ar { font-size: 1.2rem; padding: 15px 30px; }
+  .ar-viewport-container { 
+    height: 80vh; 
+  }
+  
+  .btn-start-ar { 
+    font-size: 1.1rem; 
+    padding: 14px 28px; 
+  }
 }
