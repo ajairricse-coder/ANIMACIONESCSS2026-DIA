@@ -32,7 +32,7 @@
       <div class="col-lg-8 mx-auto">
         <h1 class="display-5 fw-bold text-white mb-2">Proyección de Trabajo AR</h1>
         <p class="text-secondary fs-6">
-          Presiona el botón para iniciar la cámara y sumergirte en el modelo tridimensional en pantalla completa.
+          Abre la cámara en pantalla completa y apunta hacia el código QR o marcador impreso para visualizar el modelo 3D.
         </p>
       </div>
     </div>
@@ -57,20 +57,24 @@
           <!-- Contenedor Principal de la Experiencia -->
           <div class="ar-viewport-container" id="arContainer">
             
-            <!-- Pantalla de Inicio / Bienvenida (Se oculta al hacer clic) -->
+            <!-- Pantalla de Inicio / Bienvenida con instrucciones del QR -->
             <div class="ar-welcome-screen text-center p-4" id="welcomeScreen">
-              <div class="mb-4">
-                <i class="bi bi-view-list display-1 text-danger opacity-75"></i>
+              <div class="mb-3">
+                <i class="bi bi-qr-code-scan display-1 text-danger opacity-75"></i>
               </div>
-              <h3 class="text-white fw-bold mb-3">¿Listo para la experiencia?</h3>
-              <p class="text-light opacity-75 mb-4 max-w-50">
-                Se requerirán permisos de cámara y sensores de movimiento para posicionar los elementos en tu entorno.
+              <h3 class="text-white fw-bold mb-2">Visualizador AR por Código QR</h3>
+              <p class="text-light opacity-75 mb-4 col-md-8 mx-auto">
+                Al iniciar, concede el permiso de cámara y <b>apunta hacia el marcador o código QR</b> de tu proyecto para desplegar la experiencia.
               </p>
               
               <!-- BOTÓN DE INICIO PRINCIPAL -->
-              <button class="btn btn-start-ar" onclick="startARExperience()">
-                <i class="bi bi-play-fill fs-3"></i> INICIAR EXPERIENCIA AR
+              <button class="btn btn-start-ar mb-3" onclick="startARExperience()">
+                <i class="bi bi-camera-video-fill fs-4"></i> ABRIR CÁMARA Y PROYECTAR
               </button>
+
+              <div class="small text-secondary">
+                <i class="bi bi-info-circle me-1"></i> Se ejecutará automáticamente en pantalla completa.
+              </div>
             </div>
 
             <!-- iframe AR (Carga dinámica mediante JS) -->
@@ -87,7 +91,7 @@
           <div class="row mt-3 px-2 g-2 align-items-center">
             <div class="col-md-8 text-secondary small">
               <i class="bi bi-info-circle me-1 text-danger"></i> 
-              Para salir de la pantalla completa presiona la tecla <b>ESC</b> o el botón de retroceso en tu móvil.
+              Para salir de la pantalla completa presiona la tecla <b>ESC</b> en PC o el botón Atrás en tu móvil.
             </div>
             <div class="col-md-4 text-end">
               <a href="https://mywebar.com/pi/951297" target="_blank" class="btn btn-guinda w-100 w-md-auto">
@@ -111,23 +115,23 @@
       const statusText = document.getElementById('statusText');
       const fsButton = document.getElementById('fsButton');
 
-      // 1. Ocultar pantalla de bienvenida con transición suave
+      // 1. Ocultar pantalla de bienvenida
       welcomeScreen.style.opacity = '0';
       setTimeout(() => {
         welcomeScreen.style.visibility = 'hidden';
       }, 500);
 
-      // 2. Cargar el iframe dinámicamente y mostrarlo
+      // 2. Cargar el iframe
       arFrame.src = "https://mywebar.com/pi/951297";
       arFrame.style.display = 'block';
 
       // 3. Actualizar la interfaz de estado
       statusIndicator.style.display = 'inline-block';
-      statusText.innerText = "Transmisión AR en Vivo";
+      statusText.innerText = "Escaneando QR...";
       statusText.classList.replace('text-secondary', 'text-light');
       fsButton.style.display = 'inline-block';
 
-      // 4. Lanzar pantalla completa automáticamente
+      // 4. Activar Pantalla Completa
       requestFullScreen();
     }
 
