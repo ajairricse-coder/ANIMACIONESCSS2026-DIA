@@ -5,19 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Final - Animación de Gráficos</title>
     
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos Personalizados -->
     <link rel="stylesheet" href="ar.css">
 </head>
 <body>
 
+    <!-- Fondo Interactivo Canvas -->
     <canvas id="bg-canvas"></canvas>
 
+    <!-- Barra de Navegación -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">AG // 2026</a>
         </div>
     </nav>
 
+    <!-- Sección Principal con Visor Embed -->
     <main class="container my-4 my-md-5">
         <div class="row justify-content-center text-center mb-4">
             <div class="col-12 col-md-10 col-lg-8">
@@ -27,6 +32,7 @@
             </div>
         </div>
 
+        <!-- Panel Proyector de la App -->
         <div class="row justify-content-center">
             <div class="col-12 col-xl-11">
                 <div class="app-projector-container">
@@ -43,14 +49,17 @@
         </div>
     </main>
 
+    <!-- Pie de página -->
     <footer class="text-center py-4">
         <div class="container">
             <p class="m-0">© 2026 - Proyecto Final de Animación de Gráficos | Diseñado con Lila & Guinda</p>
         </div>
     </footer>
 
+    <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
 
+    <!-- SCRIPT DE ANIMACIÓN GRÁFICA EN CANVAS DE FONDO -->
     <script>
         const canvas = document.getElementById('bg-canvas');
         const ctx = canvas.getContext('2d');
