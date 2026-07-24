@@ -1,3 +1,4 @@
+/* --- VARIABLES Y COLORES GENERALES --- */
 :root {
     --bg-dark: #120713;
     --guinda-main: #6b1128;
@@ -19,6 +20,7 @@ body {
     flex-direction: column;
 }
 
+/* --- FONDO ANIMADO (CANVAS) --- */
 #bg-canvas {
     position: fixed;
     top: 0;
@@ -29,6 +31,7 @@ body {
     pointer-events: none;
 }
 
+/* --- NAVBAR --- */
 .navbar {
     background: rgba(18, 7, 19, 0.85) !important;
     backdrop-filter: blur(12px);
@@ -44,6 +47,7 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+/* --- ENCABEZADO Y TÍTULOS --- */
 .badge-custom {
     background: linear-gradient(135deg, var(--guinda-main), var(--guinda-glow));
     color: var(--lila-light);
@@ -71,6 +75,7 @@ body {
     font-size: clamp(0.95rem, 2vw, 1.15rem);
 }
 
+/* --- CONTENEDOR DEL IFRAME / PROYECTOR --- */
 .app-projector-container {
     background: var(--card-bg);
     border: 1px solid var(--border-glow);
@@ -101,6 +106,7 @@ body {
     display: block;
 }
 
+/* --- FOOTER --- */
 footer {
     border-top: 1px solid var(--border-glow);
     background: rgba(18, 7, 19, 0.95);
