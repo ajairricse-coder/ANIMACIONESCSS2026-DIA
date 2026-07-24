@@ -1,116 +1,141 @@
-/* --- VARIABLES Y COLORES GENERALES --- */
+/* Variables de estilo */
 :root {
-    --bg-dark: #120713;
-    --guinda-main: #6b1128;
-    --guinda-glow: #a31c3f;
-    --lila-main: #c782e8;
-    --lila-light: #eacbff;
-    --text-light: #f5e8f7;
-    --card-bg: rgba(40, 15, 38, 0.65);
-    --border-glow: rgba(199, 130, 232, 0.3);
+  --bg-dark: #0f0f12;
+  --card-bg: #18181c;
+  --guinda-primary: #800020;
+  --guinda-bright: #b3002d;
+  --guinda-glow: rgba(179, 0, 45, 0.45);
+  --text-light: #e0e0e0;
 }
 
 body {
-    background-color: var(--bg-dark);
-    color: var(--text-light);
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    overflow-x: hidden;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-/* --- FONDO ANIMADO (CANVAS) --- */
-#bg-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
+/* Fondo con efecto de degradado */
+.ar-bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: 
+    radial-gradient(circle at 15% 20%, rgba(128, 0, 32, 0.25) 0%, transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(179, 0, 45, 0.15) 0%, transparent 40%),
+    var(--bg-dark);
+  z-index: -1;
 }
 
-/* --- NAVBAR --- */
-.navbar {
-    background: rgba(18, 7, 19, 0.85) !important;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-glow);
+/* Header */
+.navbar-custom {
+  background: rgba(15, 15, 18, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(128, 0, 32, 0.3);
 }
 
-.navbar-brand {
-    font-weight: 800;
-    letter-spacing: 1px;
-    background: linear-gradient(45deg, var(--lila-light), var(--lila-main));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.brand-glow {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-/* --- ENCABEZADO Y TÍTULOS --- */
-.badge-custom {
-    background: linear-gradient(135deg, var(--guinda-main), var(--guinda-glow));
-    color: var(--lila-light);
-    padding: 8px 20px;
-    border-radius: 50px;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    box-shadow: 0 0 15px rgba(163, 28, 63, 0.4);
-    border: 1px solid var(--lila-main);
-    display: inline-block;
+.brand-glow span {
+  color: var(--guinda-bright);
+  text-shadow: 0 0 10px var(--guinda-glow);
 }
 
-.hero-title {
-    font-size: clamp(2rem, 5vw, 3.2rem);
-    font-weight: 800;
-    line-height: 1.2;
-    background: linear-gradient(to right, #ffffff, var(--lila-light), var(--lila-main));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* Tarjeta del Panel AR */
+.ar-panel-card {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(128, 0, 32, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px var(--guinda-glow);
+  overflow: hidden;
 }
 
-.hero-text {
-    color: #d1b8d6;
-    font-size: clamp(0.95rem, 2vw, 1.15rem);
+/* Contenedor responsivo para la experiencia AR */
+.ar-viewport-container {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  background-color: #000;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-/* --- CONTENEDOR DEL IFRAME / PROYECTOR --- */
-.app-projector-container {
-    background: var(--card-bg);
-    border: 1px solid var(--border-glow);
-    border-radius: 20px;
-    padding: 12px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 0 25px rgba(163, 28, 63, 0.2);
-    transition: border-color 0.3s ease;
+/* Pantalla de Inicio / Portada AR */
+.ar-welcome-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(15, 15, 18, 0.95) 0%, rgba(128, 0, 32, 0.85) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-.app-projector-container:hover {
-    border-color: var(--lila-main);
+/* Botón de Inicio Gigante con efecto Latido */
+.btn-start-ar {
+  background: linear-gradient(135deg, var(--guinda-bright) 0%, #ff0040 100%);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 50px;
+  box-shadow: 0 0 30px var(--guinda-glow);
+  transition: all 0.3s ease;
+  animation: pulse-glow 2s infinite;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.iframe-wrapper {
-    width: 100%;
-    height: 75vh;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #000;
+.btn-start-ar:hover {
+  transform: scale(1.05);
+  color: #fff;
+  box-shadow: 0 0 50px rgba(255, 0, 64, 0.8);
 }
 
-.iframe-wrapper iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 20px rgba(179, 0, 45, 0.5); }
+  50% { box-shadow: 0 0 40px rgba(255, 0, 64, 0.9); }
+  100% { box-shadow: 0 0 20px rgba(179, 0, 45, 0.5); }
 }
 
-/* --- FOOTER --- */
-footer {
-    border-top: 1px solid var(--border-glow);
-    background: rgba(18, 7, 19, 0.95);
-    color: #8c6b8f;
-    font-size: 0.9rem;
-    margin-top: auto;
+.ar-viewport-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: none; /* Oculto hasta que se presione iniciar */
+}
+
+/* Botones secundarios */
+.btn-guinda {
+  background: linear-gradient(135deg, var(--guinda-primary) 0%, var(--guinda-bright) 100%);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 4px 15px var(--guinda-glow);
+  transition: all 0.3s ease;
+}
+
+.btn-guinda:hover {
+  background: linear-gradient(135deg, var(--guinda-bright) 0%, #d60036 100%);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .ar-viewport-container { height: 80vh; }
+  .btn-start-ar { font-size: 1.2rem; padding: 15px 30px; }
 }
