@@ -19,7 +19,7 @@
 
   <!-- Escena de Realidad Aumentada apuntando a tu target compilado -->
   <a-scene 
-    mindar-image="imageTargetSrc: ./target.mind;" 
+    mindar-image="imageTargetSrc: ../assets/target.mind;" 
     color-space="sRGB" 
     renderer="colorManagement: true, physicallyCorrectLights" 
     vr-mode-ui="enabled: false" 
@@ -27,7 +27,7 @@
 
     <a-assets>
       <!-- Tu modelo animado de Blender -->
-      <a-asset-item id="miModelo" src="./mode1.glb"></a-asset-item>
+      <a-asset-item id="miModelo" src="../assets/mode1.glb"></a-asset-item>
     </a-assets>
 
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
